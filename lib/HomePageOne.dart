@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import 'loginPage.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -25,6 +27,12 @@ class _HomeScreenState extends State<HomeScreen> {
         _currentIndex,
         duration: Duration(milliseconds: 500),
         curve: Curves.easeInOut,
+      );
+    }else{
+      // Navigate to NextScreen when last image is reached
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Loginpage()),
       );
     }
   }
@@ -93,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: _nextImage,
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.symmetric(horizontal: 40, vertical: 12),
-              backgroundColor: Colors.blueAccent,
+              backgroundColor:  Colors.blueAccent,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
