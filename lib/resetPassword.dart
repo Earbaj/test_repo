@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/loginPage.dart';
 
+import 'connectToSchool.dart';
+
 class ResetPasswordScreen extends StatefulWidget {
   const ResetPasswordScreen({super.key}); 
 
@@ -21,6 +23,10 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
     if (_formKey.currentState!.validate()) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Password has been reset successfully!")),
+      );
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const ScanToConnectSchool()),
       );
     }
   }
