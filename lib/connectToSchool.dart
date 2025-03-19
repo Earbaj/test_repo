@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'QrScannerScreen.dart';
+
 
 class ScanToConnectSchool extends StatefulWidget {
   const ScanToConnectSchool({super.key});
@@ -196,7 +198,7 @@ class _ScanToConnectSchoolState extends State<ScanToConnectSchool> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const StudentInfoScreen()),
+                      MaterialPageRoute(builder: (context) => const QRScannerScreen()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -220,6 +222,12 @@ class _ScanToConnectSchoolState extends State<ScanToConnectSchool> {
     );
   }
 }
+
+
+
+
+
+//Student info view
 
 class StudentInfoScreen extends StatelessWidget {
   const StudentInfoScreen({super.key});
