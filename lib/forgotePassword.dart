@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/resetPassword.dart';
 
 import 'loginPage.dart';
 
@@ -22,6 +23,10 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
     if (_formKey.currentState!.validate()) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Password reset link sent to ${_emailController.text}")),
+      );
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const ResetPasswordScreen()),
       );
     }
   }

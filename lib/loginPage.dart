@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/resetPassword.dart';
 import 'package:untitled/signuppage.dart';
 
 import 'forgotePassword.dart';
@@ -151,10 +152,7 @@ class _LoginpageState extends State<Loginpage> {
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         print('Email: $_email, Password: $_password');
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(builder: (context) => const HomeScreen()),
-                        );
+
                       }
                     },
                     style: ElevatedButton.styleFrom(
