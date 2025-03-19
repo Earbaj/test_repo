@@ -2,6 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/signuppage.dart';
 
+import 'forgotePassword.dart';
+
 class Loginpage extends StatefulWidget {
   const Loginpage({super.key});
 
@@ -61,6 +63,7 @@ class _LoginpageState extends State<Loginpage> {
                 // Email Field
                 TextFormField(
                   decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.email_outlined),
                     labelText: 'Email',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -86,6 +89,7 @@ class _LoginpageState extends State<Loginpage> {
                 // Password Field
                 TextFormField(
                   decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.lock_outline),
                     labelText: 'Password',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -125,6 +129,10 @@ class _LoginpageState extends State<Loginpage> {
                     onTap: () {
                       print('Forgot Password tapped!');
                       // Add navigation to reset password screen here
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => const ForgotPasswordScreen()),
+                      );
                     },
                     child: Text(
                       'Forgot Password?',
