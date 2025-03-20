@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'ProfileScreen.dart';
+
 class Settingspage extends StatefulWidget {
   const Settingspage({super.key});
 
@@ -113,6 +115,12 @@ class _SettingspageState extends State<Settingspage> {
         InkWell(
           onTap: () {
             // Navigate to respective screen
+            if(title == "My Profile"){
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const Profilescreen()),
+              );
+            }
           },
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 12),
