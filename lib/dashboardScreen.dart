@@ -32,17 +32,24 @@ class _DashboardscreenState extends State<Dashboardscreen> {
                       );
                     },
                   ),
+
+                  Icon(Icons.emoji_events, color: Colors.amber, size: 30),
+                ],
+              ),
+              SizedBox(height: 20,),
+              Column(
+                children: [
                   Text(
                     "Welcome to",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                   ),
-                  Icon(Icons.emoji_events, color: Colors.amber, size: 30),
+                  Text(
+                    "LEMO",
+                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
-              Text(
-                "LEMO",
-                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
-              ),
+
               SizedBox(height: 20),
               // School Status Card
               Container(
