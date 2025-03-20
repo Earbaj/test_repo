@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:untitled/resetPassword.dart';
 import 'package:untitled/signuppage.dart';
 
+import 'dashboardScreen.dart';
 import 'forgotePassword.dart';
 
 class Loginpage extends StatefulWidget {
@@ -152,7 +153,11 @@ class _LoginpageState extends State<Loginpage> {
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         print('Email: $_email, Password: $_password');
-
+                        //do something
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (context) => const Dashboardscreen()),
+                        );
                       }
                     },
                     style: ElevatedButton.styleFrom(
