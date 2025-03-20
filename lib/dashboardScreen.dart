@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/settingsPage.dart';
 
 class Dashboardscreen extends StatefulWidget {
   const Dashboardscreen({super.key});
@@ -23,7 +24,13 @@ class _DashboardscreenState extends State<Dashboardscreen> {
                 children: [
                   IconButton(
                     icon: Icon(Icons.settings, color: Colors.purple, size: 30),
-                    onPressed: () {},
+                    onPressed: () {
+                      //Go to settings page
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Settingspage()),
+                      );
+                    },
                   ),
                   Text(
                     "Welcome to",
